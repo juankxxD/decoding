@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script async src="js/index.js"></script>
+</head>
+<body>
+    <input type="text" class="text-show" id="text"
+    onkeypress="return ((event.charCode === 32) || (event.charCode >= 97 && event.charCode <= 122) )"/>
+    <button id="cifrar">Encriptar!</button>
+    <button id="decifrar">Decencriptar!</button>
+    <button id="copiar">Copiar</button>
+    <input type="text" readonly id="response"/>
+</body>
+</html>
