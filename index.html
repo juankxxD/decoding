@@ -1,18 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200&display=swap" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
     <script async src="js/index.js"></script>
 </head>
+
 <body>
-    <input type="text" class="text-show" id="text"
-    onkeypress="return ((event.charCode === 32) || (event.charCode >= 97 && event.charCode <= 122) )"/>
-    <button id="cifrar">Encriptar!</button>
-    <button id="decifrar">Decencriptar!</button>
-    <button id="copiar">Copiar</button>
-    <input type="text" readonly id="response"/>
+    <header>
+        <img class="logo" src="assets/logo.png" alt="logo" />
+    </header>
+    <main>
+        <div class="container-main">
+            <textarea type="text" class="text-show" id="text" placeholder="Ingrese texto aqui"
+                onkeypress="return ((event.charCode === 32) || (event.charCode >= 97 && event.charCode <= 122) )"></textarea>
+            <div>
+                <p class="rules">Solo letras minusculas sin acentos</p>
+            </div>
+            <div class="container-btns">
+                <button class="btn-primary" id="cifrar">Encriptar!</button>
+                <button class="btn-second" id="decifrar">Desencriptar!</button>
+            </div>
+
+
+        </div>
+        <div class="container-result">
+            <div class="msg-get-input">
+                <div class="img-muneco">
+                    <img src="assets/Muñeco.png" alt="Muñeco" />
+                </div>
+                <h2>Ningún mensaje fue encontrado</h2>
+                <p id="get-input">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <textarea class="hidden" type="text" readonly id="response"></textarea>
+            <button class="btn-second btn-copiar hidden" id="copiar">Copiar</button>
+        </div>
+    </main>
+    <footer>
+        &copy; Creador Juan Pablo Ospina
+    </footer>
 </body>
+
 </html>

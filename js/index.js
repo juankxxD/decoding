@@ -3,6 +3,7 @@ $decifrar = document.getElementById('decifrar');
 $textInput = document.getElementById('text');
 $result = document.getElementById('response');
 $copiar = document.getElementById('copiar');
+$getInput = document.querySelector('.msg-get-input')
 
 $cifrar.onclick = (() => {
     let cifrado;
@@ -10,6 +11,7 @@ $cifrar.onclick = (() => {
     let workCorrect = $textInput.value.match(regex) ? false : true;
     if(!workCorrect) alert('no se puede tener mayusculas o caracteres especiales');
     else {
+        hidenGetInput();
         cifrado = $textInput.value.replaceAll('e', 'enter');
         cifrado = cifrado.replaceAll('i', 'imes');
         cifrado = cifrado.replaceAll('a', 'ai');
@@ -38,3 +40,9 @@ $copiar.onclick = (() => {
     $result.select();
     document.execCommand("copy");
 })
+
+function hidenGetInput() {
+    $getInput.className = 'hiddenDiv';
+    const $showResponse = document.querySelectorAll('.hidden');
+    $showResponse.forEach((element) => element.classList.remove('hidden'))
+}
