@@ -9,7 +9,10 @@
 
 body {
     background-color: var(--color-body);
-    height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 header {
@@ -44,14 +47,15 @@ header {
 
 main {
     display: flex;
-    gap: 4.3rem;
-    height: calc(100% - 6.5rem);
-    justify-content: center;
+    gap: 4.3rem;    
 }
 
 footer {
     height: 3rem;
+    display: flex;
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 button {
@@ -154,21 +158,24 @@ textarea::placeholder {
 }
 
 @media (min-width: 1008px) {
+    main {
+        justify-content: center;
+    }
     .container-main {
         padding-left: 3rem;
         width: 50%;
-        height: 85%;
+        height: calc(100vh - 9rem);
         gap: 1rem;
     }
 
     .container-result {
         width: 25%;
-        height: 90%;
         margin-top: -1.5rem;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding: 2rem 0;
+        height: calc(100vh - 12rem);
     }
 
     .img-muneco {
@@ -187,11 +194,12 @@ textarea::placeholder {
     main {
         flex-direction: column;
         align-items: center;
+        gap: 1.5rem;
     }
 
     .container-main {
         width: 90%;
-        height: 70%;
+        height: 38vh;
         gap: 1rem;
     }
 
@@ -200,16 +208,16 @@ textarea::placeholder {
     }
     .container-result {
         width: 90%;
+        height: 27vh;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 2rem 0;
+        padding: 1.5rem 0;
         gap: 1.5rem;
     }
 
     .container-result textarea {
         width: 80%;
-        height: 5rem;
     }
 
     .container-btns {
@@ -218,6 +226,9 @@ textarea::placeholder {
 
     .img-muneco {
         display: none;
+    }
+    .btn-copiar {
+        height: 3rem;
     }
 
 }
@@ -231,9 +242,8 @@ textarea::placeholder {
     }
 
     .container-main {
-        margin-top: 2rem ;
         width: 90%;
-        height: 70%;
+        height: 60vh;
         gap: 1rem;
     }
 
@@ -241,11 +251,12 @@ textarea::placeholder {
         width: 100%;
     }
     .container-result {
+        height: 35vh;
         width: 90%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 2rem 0;
+        padding: 1.5rem 0;
         gap: 1.5rem;
     }
 
