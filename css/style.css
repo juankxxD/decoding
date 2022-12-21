@@ -199,7 +199,7 @@ textarea::placeholder {
 
     .container-main {
         width: 90%;
-        height: 38vh;
+        height: 55vh;
         gap: 1rem;
     }
 
@@ -208,7 +208,7 @@ textarea::placeholder {
     }
     .container-result {
         width: 90%;
-        height: 27vh;
+        height: 24.5vh;
         flex-direction: column;
         justify-content: center;
         align-items: center;
